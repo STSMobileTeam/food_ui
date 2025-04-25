@@ -65,7 +65,7 @@ class _HomescreenState extends State<Homescreen> {
         height: 210,
         child: Column(
           children: [
-            Image.network(Images.toString(),height: 100,width: 100,),
+            Image.asset(Images.toString(),height: 100,width: 100,),
             SizedBox(height: 10,),
             TextName(name.toString()),
             SizedBox(height: 10,),
