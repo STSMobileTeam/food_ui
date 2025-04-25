@@ -83,3 +83,6 @@ String url = 'https://fakestoreapi.com/products';
     });
 
 }
+
+## DIO
+dio: ^5.3.2
