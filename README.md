@@ -86,3 +86,25 @@ String url = 'https://fakestoreapi.com/products';
 
 ## DIO
 dio: ^5.3.2
+
+
+## EasyLoading
+builder: EasyLoading.init(),
+
+EasyLoading.instance
+..displayDuration = const Duration(milliseconds: 2000)
+..indicatorType = EasyLoadingIndicatorType.fadingCircle
+..loadingStyle = EasyLoadingStyle.custom
+..indicatorSize = 45.0
+..radius = 10.0
+..progressColor = pro_secondaryColor
+..backgroundColor = Colors.white
+..indicatorColor = pro_secondaryColor
+..textColor = Colors.black
+..maskColor = Colors.blue.withOpacity(0.5)
+..userInteractions = false
+..dismissOnTap = false;
+
+EasyLoading.show(status: ConstantVariableClass.loadingString);
+
+EasyLoading.dismiss();
