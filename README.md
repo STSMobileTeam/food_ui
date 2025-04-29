@@ -108,3 +108,14 @@ EasyLoading.instance
 EasyLoading.show(status: ConstantVariableClass.loadingString);
 
 EasyLoading.dismiss();
+
+
+
+## popup dialog
+showDialog(
+context: context,
+barrierDismissible: true,
+builder: (BuildContext context) {
+
+      },
+    );

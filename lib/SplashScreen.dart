@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:food_ui/HomeScreen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:food_ui/Screen/Homescreen/HomeScreen.dart';
+import 'package:food_ui/Screen/Homescreen/bloc/homescreen_bloc.dart';
+
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -20,7 +23,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Image.asset('assets/images/logo.png',height: 300,width: 300,)),
+      body: Center(child: Image.asset(
+        'assets/images/logo.png', height: 300, width: 300,)),
     );
   }
 
@@ -29,7 +33,11 @@ class _SplashScreenState extends State<SplashScreen> {
 
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => Homescreen()),
+      MaterialPageRoute(builder: (context) =>
+          BlocProvider(
+            create: (context) => HomescreenBloc(),
+            child: Homescreen(),
+          )),
     );
   }
 
